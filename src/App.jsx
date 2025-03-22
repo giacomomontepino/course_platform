@@ -1,6 +1,9 @@
 import ButtonPrimary from "./components/buttonPrimary";
 import ButtonSecondary from "./components/buttonSecondary";
 import RotatingContainers from "./components/rotatingContainers";
+import GridSection from "./components/gridSection";
+import ContactForm from "./components/contactForm";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
         </div>
       </div>
       <RotatingContainers />
+      <GridSection />
+      <ContactForm />
+      <Footer />
     </>
   );
 }

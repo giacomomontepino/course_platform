@@ -56,20 +56,22 @@ export default function RotatingContainers() {
 
   return (
     <>
-      {containers.map((container, index) => (
-        <div
-          key={index}
-          className={`absolute top-180 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-translate duration-700 ${
-            index === ActiveIndex
-              ? "scale-x-80 z-10 opacity-100" // card attiva
-              : index === (ActiveIndex + 1) % 3
-              ? "scale-x-100 scale-y-80 z-5 opacity-80" // card appena dietro
-              : "scale-x-80 scale-y-80 z-0 opacity-60" // card dietro
-          }`}
-        >
-          {container}
-        </div>
-      ))}
+      <div className="relative -top-110">
+        {containers.map((container, index) => (
+          <div
+            key={index}
+            className={`absolute top-180 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-translate duration-700 ${
+              index === ActiveIndex
+                ? "scale-x-80 z-10 opacity-100" // card attiva
+                : index === (ActiveIndex + 1) % 3
+                ? "scale-x-100 scale-y-80 z-5" // card appena dietro
+                : "scale-x-80 scale-y-80 z-0" // card dietro
+            }`}
+          >
+            {container}
+          </div>
+        ))}
+      </div>
     </>
   );
 }
