@@ -1,8 +1,6 @@
 import image1 from "../assets/images/image_community.svg";
 import image2 from "../assets/images/image-computer.svg";
-import image3 from "../assets/images/image-gratis.svg"
-import ButtonPrimary from "./buttonPrimary";
-import ButtonSecondary from "./buttonSecondary";
+import image3 from "../assets/images/image-gratis.svg";
 
 const GridSection = () => {
   return (

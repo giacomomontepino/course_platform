@@ -1,9 +1,9 @@
 import React from "react";
 
-const ButtonSecondary = ({text}) => {
+const ButtonSecondary = ({text, onClick}) => {
   return (
     <div>
-      <button className="p-[10px] rounded-lg bg-zinc-300 cursor-pointer hover:bg-zinc-400">{text}</button>
+      <button onClick={onClick} className="p-[10px] rounded-lg bg-zinc-300 cursor-pointer hover:bg-zinc-400">{text}</button>
     </div>
   );
 };

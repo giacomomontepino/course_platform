@@ -4,8 +4,13 @@ import RotatingContainers from "./components/rotatingContainers";
 import GridSection from "./components/gridSection";
 import ContactForm from "./components/contactForm";
 import Footer from "./components/footer";
+import About from "./routes/about";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+  const { setActiveModal } = useOutletContext();
+
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-2 m-[25px] mt-20">
@@ -20,8 +25,11 @@ function App() {
           permetteranno di eccellere nel settore tecnologico
         </p>
         <div className="flex gap-5 mt-5">
-          <ButtonPrimary text="Provaci gratis per 14 giorni" />
-          <ButtonSecondary text="Scopri chi siamo" />
+          <ButtonPrimary
+            text="Provaci gratis per 14 giorni"
+            onClick={() => setActiveModal("signup")}
+          />
+          <ButtonSecondary text="Scopri chi siamo" onClick={() => navigate("/about")} />
         </div>
         <div className="flex text-xs gap-3">
           <p>✔️ Cancella quando vuoi</p>
